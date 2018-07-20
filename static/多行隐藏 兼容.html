@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>兼容 方法 多行隐藏</title>
+    <style>
+        div{
+            width: 400px;
+            font-size: 16px;
+            line-height: 20px;
+            height: 60px;
+            overflow: hidden;
+            position: relative;
+        }
+        div::after{
+            content: "...";
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+            font-size: 16px;
+            line-height: 20px;
+            background-color: white;
+            font-weight: 900;
+            color: red;
+            padding-left:40px;
+            padding-right: 10px;
+            background:-webkit-linear-gradient(left,transparent,#fff 55%);
+            background:-o-linear-gradient(right,transparent,#fff 55%);
+            background:-moz-linear-gradient(right,transparent,#fff 55%);
+            background:linear-gradient(to right,transparent,#fff 55%);
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        字符和容器高度行高
+        伪元素 :after
+        定位
+    -->
+    <div>
+            海外网7月17日电  日前，美国彭博社发表题为《特朗普误判了中国在贸易战上的决心》文章，披露特朗普发起对华贸易战的真实目的，认为这些额外征税更可能会导致特朗普自掘坟墓，因为此举意味着更长久的贸易战，这对美国经济会造成更大的损害。
+
+            　　文章称，特朗普对中国的贸易战策略是，通过施加足够的经济压力，迫使中国给予特朗普特许权。这就是特朗普计划对额外2000亿美元中国商品征收关税的目的。然而，特朗普可能会发现，与中国打交道，用施压换合作只会适得其反。
+            
+            　　文章认为，特朗普的这些新举动可能只是其中期选举前的一场真人秀，目的是让特朗普看起来很强硬。但这种做法也陷入了对现代中国的误解之中——坦率地说，是对现代中国的无知。在特朗普及其顾问看来，中国看上去很穷、依赖美国并且易受胁迫。而现实却是，现代中国是一股全球性经济力量，拥有自豪而雄心勃勃的领导层。这些领导人绝不会轻易被威胁。
+    </div>
+
+    <img src="./img/aa.svg" alt="" srcset="">
+</body>
+</html>
